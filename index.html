@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetPeek - Discover Your IP Address & Network Info</title>
+    <meta name="description" content="Discover your public IP address instantly with NetPeek. Free, fast, and accurate IP lookup tool with location, ISP, and connection details.">
+    <meta name="keywords" content="what is my ip, ip address, public ip, my ip address, ip lookup, find my ip, netpeek">
+    <link rel="canonical" href="https://netpeek.io">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Google AdSense - REMPLACE ca-pub-XXXXXXX par ton ID -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX"
+         crossorigin="anonymous"></script>
+
+    <header>
+        <nav>
+            <a href="/" class="logo">WhatIsMy<span>IP</span></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#about">About</a></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Your IP Address</h1>
+            <div class="ip-display" id="ip-display">
+                <div class="spinner" id="spinner"></div>
+                <span class="ip-address" id="ip-address"></span>
+            </div>
+            <button class="copy-btn" id="copy-btn" onclick="copyIP()">Copy IP</button>
+        </section>
+
+        <section class="ip-info">
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="label">IP Address</span>
+                    <span class="value" id="info-ip">-</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Location</span>
+                    <span class="value" id="info-location">-</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">ISP</span>
+                    <span class="value" id="info-isp">-</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Timezone</span>
+                    <span class="value" id="info-timezone">-</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Coordinates</span>
+                    <span class="value" id="info-coords">-</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">AS Number</span>
+                    <span class="value" id="info-as">-</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- AD: Banner entre IP info et VPN section -->
+        <section class="ad-section">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXX"
+                 data-ad-slot="1111111111"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </section>
+
+        <!-- VPN AFFILIATE SECTION -->
+        <section class="vpn-section">
+            <h2>Protect Your IP Address</h2>
+            <p>Your IP reveals your location and identity. A VPN hides it and keeps you safe online.</p>
+            <div class="vpn-cards">
+                <!--
+                    ============================================
+                    REMPLACE CES LIENS PAR TES LIENS D'AFFILIATION
+                    Inscris-toi sur Impact.com pour avoir tes liens
+                    ============================================
+                -->
+                <div class="vpn-card recommended">
+                    <div class="badge">Recommended</div>
+                    <h3>NordVPN</h3>
+                    <ul>
+                        <li>5,600+ servers in 60 countries</li>
+                        <li>Zero-log policy</li>
+                        <li>6 simultaneous connections</li>
+                    </ul>
+                    <div class="price">From $3.49/mo</div>
+                    <!-- REMPLACE l'URL ci-dessous par ton lien d'affiliation NordVPN -->
+                    <a href="https://nordvpn.com/pricing/?fid=TA" class="vpn-btn affiliate-link" data-vpn="nordvpn" target="_blank" rel="noopener sponsored">Get NordVPN</a>
+                </div>
+                <div class="vpn-card">
+                    <h3>Surfshark</h3>
+                    <ul>
+                        <li>3,200+ servers in 100 countries</li>
+                        <li>Unlimited devices</li>
+                        <li>CleanWeb ad blocker</li>
+                    </ul>
+                    <div class="price">From $2.19/mo</div>
+                    <!-- REMPLACE l'URL ci-dessous par ton lien d'affiliation Surfshark -->
+                    <a href="https://surfshark.com/pricing?aff_id=TA" class="vpn-btn affiliate-link" data-vpn="surfshark" target="_blank" rel="noopener sponsored">Get Surfshark</a>
+                </div>
+                <div class="vpn-card">
+                    <h3>ExpressVPN</h3>
+                    <ul>
+                        <li>3,000+ servers in 105 countries</li>
+                        <li>TrustedServer technology</li>
+                        <li>24/7 live chat support</li>
+                    </ul>
+                    <div class="price">From $6.67/mo</div>
+                    <!-- REMPLACE l'URL ci-dessous par ton lien d'affiliation ExpressVPN -->
+                    <a href="https://expressvpn.com/order?aff_id=TA" class="vpn-btn affiliate-link" data-vpn="expressvpn" target="_blank" rel="noopener sponsored">Get ExpressVPN</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADDITIONAL TOOLS -->
+        <section class="tools-section" id="tools">
+            <h2>Free Network Tools</h2>
+            <div class="tools-grid">
+                <a href="#" class="tool-card">
+                    <div class="tool-icon">&#128274;</div>
+                    <h3>Password Generator</h3>
+                    <p>Generate strong, random passwords instantly</p>
+                </a>
+                <a href="#" class="tool-card">
+                    <div class="tool-icon">&#128225;</div>
+                    <h3>DNS Lookup</h3>
+                    <p>Query DNS records for any domain</p>
+                </a>
+                <a href="#" class="tool-card">
+                    <div class="tool-icon">&#128640;</div>
+                    <h3>Speed Test</h3>
+                    <p>Test your internet connection speed</p>
+                </a>
+                <a href="#" class="tool-card">
+                    <div class="tool-icon">&#128269;</div>
+                    <h3>Ping Test</h3>
+                    <p>Check latency to any server</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ / SEO CONTENT -->
+        <section class="faq-section" id="about">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>What is an IP address?</summary>
+                    <p>An IP (Internet Protocol) address is a unique numerical label assigned to every device connected to a network. It serves two main functions: identifying the host or network interface, and providing the location of the device in the network. Think of it as your digital home address.</p>
+                </details>
+                <details>
+                    <summary>What's the difference between public and private IP?</summary>
+                    <p>A <strong>public IP address</strong> is assigned by your ISP and is visible to the entire internet. A <strong>private IP address</strong> is used within your local network (home, office) and is not directly accessible from the outside. This tool shows your public IP.</p>
+                </details>
+                <details>
+                    <summary>Can someone track me with my IP address?</summary>
+                    <p>Your IP address can reveal your approximate location (city/region), your ISP, and some connection details. While it doesn't expose your exact name or address, it can be used to approximate your location. Using a VPN hides your real IP from websites and trackers.</p>
+                </details>
+                <details>
+                    <summary>How do I change my IP address?</summary>
+                    <p>You can change your IP by: restarting your router (dynamic IP), using a VPN service, connecting through a proxy, or contacting your ISP to request a new static IP. The easiest method is using a VPN, which also encrypts your traffic.</p>
+                </details>
+                <details>
+                    <summary>Is my IP address static or dynamic?</summary>
+                    <p>Most residential connections use dynamic IP addresses, meaning your ISP periodically assigns a new one. Static IPs remain constant and are typically used for servers or business connections. You can check by restarting your router and comparing the new IP with your current one.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WhatIsMyIP. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script src="affiliate-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
