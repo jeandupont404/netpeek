@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetPeek - Discover Your IP Address & Network Info</title>
-    <meta name="description" content="Discover your public IP address instantly with NetPeek. Free, fast, and accurate IP lookup tool with location, ISP, and connection details.">
-    <meta name="keywords" content="what is my ip, ip address, public ip, my ip address, ip lookup, find my ip, netpeek">
+
+    <!-- Primary SEO -->
+    <title>What Is My IP Address — Free IP Lookup Tool | NetPeek</title>
+    <meta name="description" content="Instantly discover your public IP address, location, ISP, timezone, and network details with NetPeek. Free, fast, no signup required.">
     <link rel="canonical" href="https://netpeek.js.org">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="What Is My IP Address — Free IP Lookup Tool | NetPeek">
+    <meta property="og:description" content="Instantly discover your public IP address, location, ISP, timezone, and network details. Free, fast, no signup.">
+    <meta property="og:url" content="https://netpeek.js.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NetPeek">
+    <meta property="og:image" content="https://netpeek.js.org/og-image.png">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is My IP Address — Free IP Lookup Tool | NetPeek">
+    <meta name="twitter:description" content="Instantly discover your public IP address, location, ISP, and network details. Free, fast, no signup.">
+    <meta name="twitter:image" content="https://netpeek.js.org/og-image.png">
+
+    <!-- Performance: Preconnect to IP API providers -->
+    <link rel="preconnect" href="https://api.ipify.org" crossorigin>
+    <link rel="preconnect" href="https://ip-api.com" crossorigin>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "NetPeek — What Is My IP Address",
+        "url": "https://netpeek.js.org",
+        "description": "Instantly discover your public IP address, location, ISP, timezone, and network details. Free, fast, no signup required.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Public IP address detection",
+            "Geolocation lookup",
+            "ISP and network details",
+            "Timezone and coordinates",
+            "AS number information"
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,18 +60,21 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX"
          crossorigin="anonymous"></script>
 
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header>
-        <nav>
-            <a href="/" class="logo">WhatIsMy<span>IP</span></a>
+        <nav aria-label="Primary navigation">
+            <a href="/" class="logo" aria-label="NetPeek — Home">Net<span>Peek</span></a>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#tools">Tools</a></li>
-                <li><a href="#about">About</a></a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <article>
         <section class="hero">
             <h1>Your IP Address</h1>
             <div class="ip-display" id="ip-display">
@@ -176,10 +225,11 @@
                 </details>
             </div>
         </section>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 WhatIsMyIP. All rights reserved.</p>
+        <p>&copy; 2026 NetPeek. All rights reserved.</p>
         <div class="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
@@ -187,7 +237,7 @@
         </div>
     </footer>
 
-    <script src="affiliate-config.js"></script>
-    <script src="script.js"></script>
+    <script defer src="affiliate-config.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>
