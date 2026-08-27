@@ -27,6 +27,7 @@
     <!-- Performance: Preconnect to IP API providers -->
     <link rel="preconnect" href="https://api.ipify.org" crossorigin>
     <link rel="preconnect" href="https://ip-api.com" crossorigin>
+    <link rel="preconnect" href="https://dns.google" crossorigin>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -48,14 +49,30 @@
             "Geolocation lookup",
             "ISP and network details",
             "Timezone and coordinates",
-            "AS number information"
+            "AS number information",
+            "DNS lookup",
+            "Password generator"
         ]
     }
     </script>
 
+    <!--
+        ============================================================
+        MAINTENANCE MODE
+        ============================================================
+        Tant que l'intégration des outils / publicités n'est pas
+        terminée, on redirige les visiteurs vers maintenance.html.
+        Pour remettre le site en ligne : supprimez simplement le
+        bloc <script> ci-dessous.
+        ============================================================
+    -->
+    <script>
+        window.location.replace('maintenance.html');
+    </script>
+
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google AdSense -->
+    <!-- Google AdSense (placeholder: remplacer ca-pub-XXXXXXX par le vrai publisher ID) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -116,26 +133,29 @@
         <section class="tools-section" id="tools">
             <h2>Free Network Tools</h2>
             <div class="tools-grid">
-                <a href="#" class="tool-card">
+                <div class="tool-card">
                     <div class="tool-icon">&#128274;</div>
                     <h3>Password Generator</h3>
                     <p>Generate strong, random passwords instantly</p>
-                </a>
-                <a href="#" class="tool-card">
+                    <div class="tool-output" id="password-output"></div>
+                    <button class="tool-btn" id="password-btn" onclick="generateAndShowPassword()">Generate Password</button>
+                </div>
+                <div class="tool-card">
                     <div class="tool-icon">&#128225;</div>
                     <h3>DNS Lookup</h3>
                     <p>Query DNS records for any domain</p>
-                </a>
-                <a href="#" class="tool-card">
-                    <div class="tool-icon">&#128640;</div>
-                    <h3>Speed Test</h3>
-                    <p>Test your internet connection speed</p>
-                </a>
-                <a href="#" class="tool-card">
+                    <input type="text" id="dns-domain" class="tool-input" placeholder="example.com" value="example.com">
+                    <button class="tool-btn" id="dns-btn" onclick="performDNSLookup()">Lookup DNS</button>
+                    <div id="dns-results" class="tool-output"></div>
+                </div>
+                <div class="tool-card">
                     <div class="tool-icon">&#128269;</div>
-                    <h3>Ping Test</h3>
-                    <p>Check latency to any server</p>
-                </a>
+                    <h3>Latency Test</h3>
+                    <p>Measure round-trip latency to a server</p>
+                    <input type="text" id="latency-url" class="tool-input" placeholder="https://example.com" value="https://example.com">
+                    <button class="tool-btn" id="latency-btn" onclick="testLatency()">Test Latency</button>
+                    <div id="latency-results" class="tool-output"></div>
+                </div>
             </div>
         </section>
 
