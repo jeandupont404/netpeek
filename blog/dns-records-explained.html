@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>DNS Records Explained: A, AAAA, CNAME, MX, NS and TXT Records</title>
+    <meta name="description" content="What are DNS records? A clear guide to A, AAAA, CNAME, MX, NS and TXT records — what each one does, why they matter, and how to look them up for any domain.">
+    <link rel="canonical" href="https://netpeek.pp.ua/blog/dns-records-explained">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DNS Records Explained: A, AAAA, CNAME, MX, NS and TXT Records">
+    <meta property="og:description" content="A clear guide to A, AAAA, CNAME, MX, NS and TXT records — what each one does and how to look them up.">
+    <meta property="og:url" content="https://netpeek.pp.ua/blog/dns-records-explained">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NetPeek">
+    <meta property="og:image" content="https://netpeek.pp.ua/og-image.png">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DNS Records Explained: A, AAAA, CNAME, MX, NS and TXT Records">
+    <meta name="twitter:description" content="A clear guide to A, AAAA, CNAME, MX, NS and TXT records.">
+    <meta name="twitter:image" content="https://netpeek.pp.ua/og-image.png">
+
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "DNS Records Explained: A, AAAA, CNAME, MX, NS and TXT Records",
+        "description": "What are DNS records? A clear guide to A, AAAA, CNAME, MX, NS and TXT records and how to look them up.",
+        "datePublished": "2026-08-28",
+        "dateModified": "2026-08-28",
+        "author": { "@type": "Organization", "name": "NetPeek" },
+        "publisher": { "@type": "Organization", "name": "NetPeek" },
+        "mainEntityOfPage": "https://netpeek.pp.ua/blog/dns-records-explained"
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+        <nav aria-label="Primary navigation">
+            <a href="/" class="logo" aria-label="NetPeek — Home">Net<span>Peek</span></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dns-lookup">DNS Lookup</a></li>
+                <li><a href="/password-generator">Password Generator</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article class="article">
+            <h1>DNS Records Explained: A, AAAA, CNAME, MX, NS and TXT Records</h1>
+            <p class="article-meta">NetPeek · Updated August 28, 2026</p>
+
+            <p>When you type a domain name into your browser, the <strong>Domain Name System (DNS)</strong> translates it into the technical records that actually route your request to the right server. These records are the invisible backbone of every website. Here's what the most common DNS record types do.</p>
+
+            <div class="tip-box"><strong>Try it live:</strong> Use our free <a href="/dns-lookup">DNS lookup tool</a> to see the A, AAAA, CNAME, MX, NS and TXT records for any domain instantly.</div>
+
+            <h2>What is a DNS record?</h2>
+            <p>A DNS record is an instruction stored in a domain's zone file. Together, a domain's records tell the internet where its website lives, where its email goes, and how to verify it. Every time you visit a site, your device queries these records — usually in milliseconds, in the background.</p>
+
+            <h2>The main DNS record types</h2>
+
+            <h3>A record (Address)</h3>
+            <p>The <strong>A record</strong> maps a domain name to an <strong>IPv4 address</strong>. It's the most fundamental record — it's what tells a browser "this domain points to this server's address." For example, an A record might point <code>example.com</code> to <code>93.184.216.34</code>.</p>
+
+            <h3>AAAA record</h3>
+            <p>The <strong>AAAA record</strong> is exactly like an A record, but maps the domain to an <strong>IPv6 address</strong> instead of IPv4. As the internet adopts IPv6, more sites publish AAAA records alongside their A records.</p>
+
+            <h3>CNAME record (Canonical Name)</h3>
+            <p>A <strong>CNAME record</strong> aliases one domain to another, so both resolve to the same place. It's commonly used so that <code>www.example.com</code> points to <code>example.com</code>, and for pointing subdomains to services like a CDN or email provider.</p>
+
+            <h3>MX record (Mail Exchanger)</h3>
+            <p>The <strong>MX record</strong> specifies which mail servers are responsible for receiving email for the domain, along with a priority value. Lower numbers mean higher priority. If you run email for a custom domain, correct MX records are essential.</p>
+
+            <h3>NS record (Name Server)</h3>
+            <p>The <strong>NS record</strong> identifies the authoritative name servers that hold the domain's DNS zone. It's the record that tells the internet which server is the "source of truth" for a domain's other records.</p>
+
+            <h3>TXT record (Text)</h3>
+            <p>A <strong>TXT record</strong> holds arbitrary text attached to a domain. It's most often used for verification and security — for example, <strong>SPF</strong> and <strong>DKIM</strong> records that help prevent email spoofing, or tokens that prove you own a domain (like a Google Search Console verification).</p>
+
+            <h2>Quick reference table</h2>
+            <table>
+                <thead>
+                    <tr><th>Record</th><th>Stands for</th><th>What it maps</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>A</strong></td><td>Address</td><td>Domain → IPv4 address</td></tr>
+                    <tr><td><strong>AAAA</strong></td><td>IPv6 Address</td><td>Domain → IPv6 address</td></tr>
+                    <tr><td><strong>CNAME</strong></td><td>Canonical Name</td><td>Domain → another domain (alias)</td></tr>
+                    <tr><td><strong>MX</strong></td><td>Mail Exchanger</td><td>Domain → email servers</td></tr>
+                    <tr><td><strong>NS</strong></td><td>Name Server</td><td>Domain → authoritative name servers</td></tr>
+                    <tr><td><strong>TXT</strong></td><td>Text</td><td>Domain → text (SPF, DKIM, verification)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>How to look up DNS records</h2>
+            <p>Checking a domain's DNS records is quick and free. Just enter any domain in our <a href="/dns-lookup">DNS lookup tool</a> and it will return all the A, AAAA, CNAME, MX, NS and TXT records at once. This is handy for troubleshooting, verifying a domain setup, or inspecting a site before you connect to it.</p>
+
+            <h2>Why DNS records matter for your website</h2>
+            <p>If your records are wrong, your site won't load, your email won't arrive, or visitors will be sent to the wrong server. Understanding these records helps you debug "why is my website down?" questions and correctly configure hosting, email and custom domain setups for services like GitHub Pages.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <h3>How long do DNS changes take?</h3>
+            <p>It depends on the TTL (Time To Live) value of the record and your ISP's caching. Changes can take anywhere from minutes to 48 hours to propagate everywhere, though most take effect within a few hours.</p>
+
+            <h3>What is a DNS TTL?</h3>
+            <p>TTL (Time To Live) is how long a DNS record can be cached before it's re-queried. A shorter TTL means changes propagate faster, while a longer TTL reduces DNS queries and speeds up repeated lookups.</p>
+
+            <h3>What does DNS propagation mean?</h3>
+            <p>DNS propagation is the time it takes for a record change to spread from your domain's nameservers to all the DNS caches around the world. During propagation, some users may see the old record and others the new one.</p>
+
+            <div class="other-articles">
+                <h2>Keep reading</h2>
+                <ul>
+                    <li><a href="/blog/how-to-find-ip-address">How to Find Your IP Address on Windows, Mac, iPhone and Android</a></li>
+                    <li><a href="/blog/ipv4-vs-ipv6">IPv4 vs IPv6: What's the difference?</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetPeek. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/dns-lookup">DNS Lookup</a>
+            <a href="/password-generator">Password Generator</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </footer>
+
+    <script defer src="../script.js"></script>
+</body>
+</html>

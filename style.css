@@ -402,6 +402,186 @@ nav ul a:hover {
     padding: 2rem;
 }
 
+/* ARTICLE */
+.blog-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.blog-list h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-list > .blog-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.blog-card {
+    display: block;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.blog-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.blog-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.blog-card .blog-meta {
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.75rem;
+}
+
+.article {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 2rem 1rem;
+}
+
+.article h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+
+.article .article-meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.article h2 {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--accent);
+}
+
+.article h3 {
+    font-size: 1.15rem;
+    margin: 1.75rem 0 0.75rem;
+}
+
+.article p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.article ul,
+.article ol {
+    margin: 0 0 1.25rem 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.article li {
+    margin-bottom: 0.4rem;
+}
+
+.article strong {
+    color: var(--text-primary);
+}
+
+.article pre {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.article code {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+}
+
+.article pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.article .tip-box {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+}
+
+.article .tip-box strong {
+    color: var(--text-primary);
+}
+
+.article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+}
+
+.article th,
+.article td {
+    border: 1px solid var(--border);
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+}
+
+.article th {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.article td {
+    color: var(--text-secondary);
+}
+
+.article .other-articles {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.article .other-articles h2 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.article .other-articles ul {
+    margin-left: 1.5rem;
+}
+
 .faq-section h2 {
     text-align: center;
     font-size: 2rem;
