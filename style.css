@@ -83,7 +83,8 @@ nav ul a:hover {
 }
 
 .hero .dns-tool,
-.hero .password-tool {
+.hero .password-tool,
+.hero .latency-tool {
     max-width: 640px;
     margin: 0 auto;
 }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Free Latency Test — Check Ping / Round-Trip Time to Any Server | NetPeek</title>
+    <meta name="description" content="Free latency test tool. Measure ping and round-trip time (RTT) to any URL or IP address instantly from your browser. Check server response speed in one click.">
+    <link rel="canonical" href="https://netpeek.pp.ua/latency-test">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Latency Test — Check Ping / Round-Trip Time to Any Server | NetPeek">
+    <meta property="og:description" content="Measure ping and round-trip time (RTT) to any URL or IP address instantly from your browser.">
+    <meta property="og:url" content="https://netpeek.pp.ua/latency-test">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NetPeek">
+    <meta property="og:image" content="https://netpeek.pp.ua/og-image.png">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Latency Test — Check Ping / Round-Trip Time to Any Server | NetPeek">
+    <meta name="twitter:description" content="Measure ping and round-trip time (RTT) to any URL or IP address instantly.">
+    <meta name="twitter:image" content="https://netpeek.pp.ua/og-image.png">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://dns.google" crossorigin>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "NetPeek — Free Latency Test",
+        "url": "https://netpeek.pp.ua/latency-test",
+        "description": "Free latency test tool to measure ping and round-trip time (RTT) to any URL or IP address directly from your browser, with no signup.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Instant round-trip time (RTT) measurement",
+            "Test any URL, domain or IP address",
+            "Runs directly in your browser",
+            "No signup required"
+        ]
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I test latency to a server?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enter any URL, domain or IP address in the field above and click Test Latency. NetPeek sends a request to that server directly from your browser and measures the round-trip time (RTT) in milliseconds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is latency and round-trip time (RTT)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Latency is the time it takes for data to travel from your device to a server and back, called the round-trip time (RTT). It's measured in milliseconds (ms) and is a key indicator of connection responsiveness, especially for gaming, video calls and live streaming."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good latency (ping) number?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generally, a ping under 20ms is excellent, 20-50ms is good, 50-100ms is average, and anything above 150ms can cause noticeable lag for gaming or video calls. Lower is always better."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this latency test free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. NetPeek's latency test is completely free, requires no signup or account, and runs directly in your browser with no limits."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+        <nav aria-label="Primary navigation">
+            <a href="/" class="logo" aria-label="NetPeek — Home">Net<span>Peek</span></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dns-lookup">DNS Lookup</a></li>
+                <li><a href="/password-generator">Password Generator</a></li>
+                <li><a href="/latency-test" aria-current="page">Latency Test</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article>
+        <section class="hero">
+            <h1>Latency Test</h1>
+            <p>Measure ping and round-trip time (RTT) to any URL, domain or IP address</p>
+            <div class="latency-tool">
+                <input type="text" id="latency-url" class="tool-input" placeholder="https://example.com" value="https://example.com">
+                <button class="tool-btn" id="latency-btn" onclick="testLatency()">Test Latency</button>
+                <div id="latency-results" class="tool-output"></div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="about">
+            <h2>About Latency Testing</h2>
+            <p>NetPeek's free latency test measures how quickly a server responds to your connection. Enter any URL, domain or IP address and the tool sends a request directly from your browser, returning the round-trip time (RTT) in milliseconds. It's a quick way to check the responsiveness of a website, game server or API before you rely on it.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>How do I test latency to a server?</summary>
+                    <p>Enter any URL, domain or IP address in the field above and click Test Latency. NetPeek sends a request to that server directly from your browser and measures the round-trip time (RTT) in milliseconds.</p>
+                </details>
+                <details>
+                    <summary>What is latency and round-trip time (RTT)?</summary>
+                    <p>Latency is the time it takes for data to travel from your device to a server and back, called the round-trip time (RTT). It's measured in milliseconds (ms) and is a key indicator of connection responsiveness, especially for gaming, video calls and live streaming.</p>
+                </details>
+                <details>
+                    <summary>What is a good latency (ping) number?</summary>
+                    <p>Generally, a ping under 20ms is excellent, 20-50ms is good, 50-100ms is average, and anything above 150ms can cause noticeable lag for gaming or video calls. Lower is always better.</p>
+                </details>
+                <details>
+                    <summary>Is this latency test free?</summary>
+                    <p>Yes. NetPeek's latency test is completely free, requires no signup or account, and runs directly in your browser with no limits.</p>
+                </details>
+            </div>
+        </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetPeek. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/dns-lookup">DNS Lookup</a>
+            <a href="/password-generator">Password Generator</a>
+            <a href="/latency-test">Latency Test</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+</html>

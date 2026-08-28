@@ -51,7 +51,8 @@
             "Timezone and coordinates",
             "AS number information",
             "DNS lookup",
-            "Password generator"
+            "Password generator",
+            "Latency test"
         ]
     }
     </script>
@@ -122,6 +123,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/dns-lookup">DNS Lookup</a></li>
                 <li><a href="/password-generator">Password Generator</a></li>
+                <li><a href="/latency-test">Latency Test</a></li>
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </nav>
@@ -195,6 +197,7 @@
                     <input type="text" id="latency-url" class="tool-input" placeholder="https://example.com" value="https://example.com">
                     <button class="tool-btn" id="latency-btn" onclick="testLatency()">Test Latency</button>
                     <div id="latency-results" class="tool-output"></div>
+                    <p class="tool-more"><a href="/latency-test">Open dedicated tool page →</a></p>
                 </div>
             </div>
         </section>
@@ -257,9 +260,11 @@
     <footer>
         <p>&copy; 2026 NetPeek. All rights reserved.</p>
         <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact</a>
+            <a href="/">Home</a>
+            <a href="/dns-lookup">DNS Lookup</a>
+            <a href="/password-generator">Password Generator</a>
+            <a href="/latency-test">Latency Test</a>
+            <a href="/blog">Blog</a>
         </div>
     </footer>
 
