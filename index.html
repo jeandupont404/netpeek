@@ -7,13 +7,13 @@
     <!-- Primary SEO -->
     <title>What Is My IP Address — Free IP Lookup Tool | NetPeek</title>
     <meta name="description" content="Instantly discover your public IP address, location, ISP, timezone, and network details with NetPeek. Free, fast, no signup required.">
-    <link rel="canonical" href="https://netpeek.pp.ua">
+    <link rel="canonical" href="https://netpeek.pp.ua/">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
     <!-- Open Graph -->
     <meta property="og:title" content="What Is My IP Address — Free IP Lookup Tool | NetPeek">
     <meta property="og:description" content="Instantly discover your public IP address, location, ISP, timezone, and network details. Free, fast, no signup.">
-    <meta property="og:url" content="https://netpeek.pp.ua">
+    <meta property="og:url" content="https://netpeek.pp.ua/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NetPeek">
     <meta property="og:image" content="https://netpeek.pp.ua/og-image.png">
@@ -35,7 +35,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "NetPeek — What Is My IP Address",
-        "url": "https://netpeek.pp.ua",
+        "url": "https://netpeek.pp.ua/",
         "description": "Instantly discover your public IP address, location, ISP, timezone, and network details. Free, fast, no signup required.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web",
@@ -56,6 +56,56 @@
     }
     </script>
 
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an IP address?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An IP (Internet Protocol) address is a unique numerical label assigned to every device connected to a network. It serves two main functions: identifying the host or network interface, and providing the location of the device in the network. Think of it as your digital home address."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between public and private IP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A public IP address is assigned by your ISP and is visible to the entire internet. A private IP address is used within your local network (home, office) and is not directly accessible from the outside. This tool shows your public IP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can someone track me with my IP address?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your IP address can reveal your approximate location (city/region), your ISP, and some connection details. While it doesn't expose your exact name or address, it can be used to approximate your location. Using a VPN hides your real IP from websites and trackers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I change my IP address?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can change your IP by: restarting your router (dynamic IP), using a VPN service, connecting through a proxy, or contacting your ISP to request a new static IP. The easiest method is using a VPN, which also encrypts your traffic."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my IP address static or dynamic?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most residential connections use dynamic IP addresses, meaning your ISP periodically assigns a new one. Static IPs remain constant and are typically used for servers or business connections. You can check by restarting your router and comparing the new IP with your current one."
+                }
+            }
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Google AdSense -->
@@ -70,7 +120,8 @@
             <a href="/" class="logo" aria-label="NetPeek — Home">Net<span>Peek</span></a>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#tools">Tools</a></li>
+                <li><a href="/dns-lookup">DNS Lookup</a></li>
+                <li><a href="/password-generator">Password Generator</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
@@ -126,6 +177,7 @@
                     <p>Generate strong, random passwords instantly</p>
                     <div class="tool-output" id="password-output"></div>
                     <button class="tool-btn" id="password-btn" onclick="generateAndShowPassword()">Generate Password</button>
+                    <p class="tool-more"><a href="/password-generator">Open dedicated tool page →</a></p>
                 </div>
                 <div class="tool-card">
                     <div class="tool-icon">&#128225;</div>
@@ -134,6 +186,7 @@
                     <input type="text" id="dns-domain" class="tool-input" placeholder="example.com" value="example.com">
                     <button class="tool-btn" id="dns-btn" onclick="performDNSLookup()">Lookup DNS</button>
                     <div id="dns-results" class="tool-output"></div>
+                    <p class="tool-more"><a href="/dns-lookup">Open dedicated tool page →</a></p>
                 </div>
                 <div class="tool-card">
                     <div class="tool-icon">&#128269;</div>

@@ -76,6 +76,18 @@ nav ul a:hover {
     font-weight: 400;
 }
 
+.hero p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero .dns-tool,
+.hero .password-tool {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
 .ip-display {
     background: var(--bg-secondary);
     border: 2px solid var(--border);
@@ -372,6 +384,15 @@ nav ul a:hover {
 .dns-value {
     color: var(--text-secondary);
     word-break: break-all;
+}
+
+.tool-more {
+    margin-top: 0.9rem;
+}
+
+.tool-more a {
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 /* FAQ */

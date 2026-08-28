@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Free DNS Lookup Tool — Check A, AAAA, MX, NS, TXT Records | NetPeek</title>
+    <meta name="description" content="Free DNS lookup tool. Check A, AAAA, CNAME, MX, NS and TXT records for any domain instantly. Fast, private, powered by Google DNS-over-HTTPS.">
+    <link rel="canonical" href="https://netpeek.pp.ua/dns-lookup">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free DNS Lookup Tool — Check A, AAAA, MX, NS, TXT Records | NetPeek">
+    <meta property="og:description" content="Free DNS lookup tool. Check A, AAAA, CNAME, MX, NS and TXT records for any domain instantly. Fast, private, powered by Google DNS-over-HTTPS.">
+    <meta property="og:url" content="https://netpeek.pp.ua/dns-lookup">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NetPeek">
+    <meta property="og:image" content="https://netpeek.pp.ua/og-image.png">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free DNS Lookup Tool — Check A, AAAA, MX, NS, TXT Records | NetPeek">
+    <meta name="twitter:description" content="Free DNS lookup tool. Check A, AAAA, CNAME, MX, NS and TXT records for any domain instantly.">
+    <meta name="twitter:image" content="https://netpeek.pp.ua/og-image.png">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://dns.google" crossorigin>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "NetPeek — Free DNS Lookup Tool",
+        "url": "https://netpeek.pp.ua/dns-lookup",
+        "description": "Free DNS lookup tool to check A, AAAA, CNAME, MX, NS and TXT records for any domain, powered by Google DNS-over-HTTPS.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "A and AAAA record lookup",
+            "CNAME, MX, NS and TXT lookup",
+            "Powered by Google DNS-over-HTTPS",
+            "No signup required"
+        ]
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a DNS lookup?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A DNS lookup translates a human-readable domain name (like example.com) into the machine-readable records that point to its servers. A DNS lookup tool queries the Domain Name System and returns the DNS records associated with a domain, such as A, AAAA, CNAME, MX, NS and TXT records."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I perform a DNS lookup?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enter any domain name in the tool above and click Lookup DNS. NetPeek queries Google DNS-over-HTTPS and instantly returns all A, AAAA, CNAME, MX, NS and TXT records for that domain, with no signup required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the different DNS record types?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A records map a domain to an IPv4 address, AAAA records map to IPv6, CNAME records alias one domain to another, MX records define mail servers, NS records specify authoritative name servers, and TXT records hold arbitrary text such as SPF or verification strings."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this DNS lookup tool free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. NetPeek's DNS lookup tool is completely free to use, with no signup, no account and no limits. It queries public Google DNS-over-HTTPS servers to return results instantly."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+        <nav aria-label="Primary navigation">
+            <a href="/" class="logo" aria-label="NetPeek — Home">Net<span>Peek</span></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dns-lookup" aria-current="page">DNS Lookup</a></li>
+                <li><a href="/password-generator">Password Generator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article>
+        <section class="hero">
+            <h1>DNS Lookup</h1>
+            <p>Check A, AAAA, CNAME, MX, NS and TXT records for any domain</p>
+            <div class="dns-tool">
+                <input type="text" id="dns-domain" class="tool-input" placeholder="Enter a domain (e.g. example.com)" value="example.com">
+                <button class="tool-btn" id="dns-btn" onclick="performDNSLookup()">Lookup DNS</button>
+                <div id="dns-results" class="tool-output"></div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="about">
+            <h2>About DNS Lookup</h2>
+            <p>Use NetPeek's free DNS lookup tool to see exactly which DNS records are published for any domain. This is useful for troubleshooting website issues, verifying that a domain is correctly configured, checking mail server settings, or inspecting a domain before connecting to it.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>What is a DNS lookup?</summary>
+                    <p>A DNS lookup translates a human-readable domain name into the records that point to its servers. This tool queries the Domain Name System and returns the DNS records associated with any domain, including A, AAAA, CNAME, MX, NS and TXT records.</p>
+                </details>
+                <details>
+                    <summary>How do I perform a DNS lookup?</summary>
+                    <p>Enter any domain name in the field above and click Lookup DNS. NetPeek instantly returns all A, AAAA, CNAME, MX, NS and TXT records for that domain, powered by Google DNS-over-HTTPS. No signup required.</p>
+                </details>
+                <details>
+                    <summary>What are the different DNS record types?</summary>
+                    <p>A records map a domain to an IPv4 address, AAAA records map to IPv6, CNAME records alias one domain to another, MX records define mail servers, NS records specify authoritative name servers, and TXT records hold arbitrary text such as SPF or verification strings.</p>
+                </details>
+                <details>
+                    <summary>Is this DNS lookup tool free?</summary>
+                    <p>Yes. NetPeek's DNS lookup tool is completely free, with no signup, no account and no limits. It queries public Google DNS-over-HTTPS servers to return results instantly.</p>
+                </details>
+            </div>
+        </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetPeek. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/dns-lookup">DNS Lookup</a>
+            <a href="/password-generator">Password Generator</a>
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
