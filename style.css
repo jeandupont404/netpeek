@@ -101,8 +101,7 @@ nav ul a:hover {
     transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
 }
 
-.nav-item:hover .dropdown,
-.nav-item:focus-within .dropdown {
+.nav-item:hover .dropdown {
     opacity: 1;
     visibility: visible;
 }
