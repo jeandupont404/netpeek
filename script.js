@@ -1,4 +1,8 @@
+const ADSENSE_CLIENT = 'ca-pub-5983443345513035';
+const ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CLIENT;
+
 document.addEventListener('DOMContentLoaded', () => {
+    initCookieConsent();
     fetchIP();
     initAffiliateTracking();
 });
@@ -204,4 +208,67 @@ function initAffiliateTracking() {
             }
         });
     });
+}
+
+/* ---------- Cookie consent (RGPD / GDPR) ---------- */
+const COOKIE_CONSENT_KEY = 'netpeek_cookie_consent';
+
+function getCookieConsent() {
+    try {
+        const val = localStorage.getItem(COOKIE_CONSENT_KEY);
+        return val === 'accepted' ? 'accepted' : val === 'declined' ? 'declined' : null;
+    } catch (e) {
+        return null;
+    }
+}
+
+function setCookieConsent(value) {
+    try {
+        localStorage.setItem(COOKIE_CONSENT_KEY, value);
+    } catch (e) {
+        document.cookie = COOKIE_CONSENT_KEY + '=' + value + ';max-age=31536000;path=/';
+    }
+}
+
+function loadAdSense() {
+    if (document.querySelector('script[data-adsense="consent"]')) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = ADSENSE_SRC;
+    s.crossOrigin = 'anonymous';
+    s.setAttribute('data-adsense', 'consent');
+    document.head.appendChild(s);
+}
+
+function initCookieConsent() {
+    const banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+
+    const consent = getCookieConsent();
+    if (consent === 'accepted') {
+        loadAdSense();
+        return;
+    }
+    if (consent === 'declined') {
+        return;
+    }
+
+    banner.classList.add('visible');
+
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            setCookieConsent('accepted');
+            banner.classList.remove('visible');
+            loadAdSense();
+        });
+    }
+    if (declineBtn) {
+        declineBtn.addEventListener('click', () => {
+            setCookieConsent('declined');
+            banner.classList.remove('visible');
+        });
+    }
 }
